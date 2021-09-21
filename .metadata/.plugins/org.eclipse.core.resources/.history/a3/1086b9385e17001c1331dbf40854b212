@@ -1,0 +1,26 @@
+package pageFactory;
+
+import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+import base.Mains;
+import io.cucumber.core.cli.Main;
+
+public class Course extends Mains {
+
+	@FindBy(id="menu-item-3850")
+	public WebElement courselink;
+	
+	public Course() {
+		PageFactory.initElements(driver, this);
+		
+}
+	
+	
+	public void course_link_enabled_Test() {
+		Assert.assertTrue(courselink.isDisplayed());
+	}
+}

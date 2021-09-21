@@ -1,0 +1,23 @@
+package step_Definitions;
+
+import org.junit.Assert;
+
+import base.Mains;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import pageFactory.Course;
+
+public class CourseTests extends Mains{ 
+	
+	Course cp = new Course();
+
+	@Given("The user in home page")
+	public void the_user_in_home_page() {
+		HomePage_Initialization();
+	}
+
+	@Then("The user should be able to view the  Courses link as enabled")
+	public void the_user_should_be_able_to_view_the_courses_link_as_enabled() {
+		  Assert.assertTrue(cp.courselink.isDisplayed());
+	}
+}

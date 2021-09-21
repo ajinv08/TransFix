@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="classes" name="Failed suite [VarClassSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="3" parallel="classes" name="TestVarClass(failed)">
+    <groups>
+      <run>
+        <include name="SmokeTest"/>
+        <include name="Regression-Minor"/>
+        <include name="Reg-Aji-Self-Data"/>
+        <include name="Reg-Aji-Self"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testNG.Frames">
+        <methods>
+          <include name="frameTest"/>
+          <include name="testStarts"/>
+          <include name="testFinished"/>
+        </methods>
+      </class> <!-- testNG.Frames -->
+      <class name="testNG.KeywordsAndAnnotations">
+        <methods>
+          <include name="testFinished"/>
+          <include name="accountAndList"/>
+          <include name="testStarts"/>
+        </methods>
+      </class> <!-- testNG.KeywordsAndAnnotations -->
+    </classes>
+  </test> <!-- TestVarClass(failed) -->
+</suite> <!-- Failed suite [VarClassSuite] -->

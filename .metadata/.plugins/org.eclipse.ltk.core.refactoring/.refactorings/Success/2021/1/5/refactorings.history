@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;succpkg.Succclass&apos; to &apos;TestJava&apos;&#x0D;&#x0A;- Original project: &apos;Success&apos;&#x0D;&#x0A;- Original element: &apos;succpkg.Succclass&apos;&#x0D;&#x0A;- Renamed element: &apos;succpkg.TestJava&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Succclass&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;succpkg{Succclass.java[Succclass" matchStrategy="1" name="TestJava" qualified="false" references="true" similarDeclarations="false" stamp="1611799334842" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ParameterizationSuite">
+  <test thread-count="5" name="ParameterTest">
+  
+  <parameter name="chromeKey" value="webdriver.chrome.driver" />
+  <parameter name="QaEnvUrl" value="http://demo.guru99.com/test/newtours/login.php" />
+  <parameter name="chromePath" value="C:\\QA Drivers\\chromedriver.exe" />
+ 
+  <groups>
+  
+   	<run>
+  		<exclude name ="Reg-Aji-Self-Data" />
+  		<include name ="Regression-Minor" />
+     </run>
+  </groups>
+ 
+    <classes>
+      <class name="testNG.TestNGParameterization"/>
+    </classes>
+  </test> <!-- ParameterTest -->
+</suite> <!-- ParameterizationSuite -->

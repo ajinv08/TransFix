@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="methods" name="Failed suite [SuiteParameterRevision]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="methods" name="TestParameterRevision(failed)">
+    <parameter name="chromeKey" value="webdriver.chrome.driver"/>
+    <parameter name="qaEnvUrl" value="http://demo.guru99.com/test/newtours/register.php"/>
+    <parameter name="chromePath" value="C:\\QA Drivers\\chromedriver.exe"/>
+    <groups>
+      <run>
+        <include name="group1"/>
+        <include name="group2"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testNG.TestNGforParameterizationStudy">
+        <methods>
+          <include name="inlMethods"/>
+          <include name="testonDemoforStudy" invocation-numbers="0 1 2 3 4 5 6 7"/>
+          <include name="closeMethod"/>
+          <include name="eachMethodInlStep"/>
+        </methods>
+      </class> <!-- testNG.TestNGforParameterizationStudy -->
+    </classes>
+  </test> <!-- TestParameterRevision(failed) -->
+</suite> <!-- Failed suite [SuiteParameterRevision] -->

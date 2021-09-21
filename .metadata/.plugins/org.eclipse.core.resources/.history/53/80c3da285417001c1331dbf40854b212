@@ -1,0 +1,9 @@
+chrome_key=webdriver.chrome.driver
+chrome_path=C:\QA Drivers\chromedriver.exe
+uaturl=https://transfotechacademy.com/
+
+Data_Analytics_Visualization_Url = https://transfotechacademy.com/course/data-analytics/
+Cyber_Security_Professional_Url = https://transfotechacademy.com/course/cyber-security-professional/
+Cloud_Engineering_Url = https://transfotechacademy.com/course/cloud-engineering/
+Business_Analyst_Url = https://transfotechacademy.com/course/business-analyst/
+Full_Stack_QA_Engineering_Course_Url = https://transfotechacademy.com/qa-engineer/
