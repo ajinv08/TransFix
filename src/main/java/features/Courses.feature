@@ -16,7 +16,7 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@Regression
+@Regression-done
 Feature: Courses
   As a user,  I should be able to view various course details offered, by accessing the courses link from the Home Page
 
@@ -34,17 +34,18 @@ Feature: Courses
 	Scenario Outline: Courses Link Drop Down Menu Selection Test
 		Given The user in home page
 		When The user clicks on Courses Link
-		And The user selects any of the Courses listed  from the drop down menu <course>
-		Then The corresponding course page should be displayed
+		And The user selects any of the Courses listed  from the drop down menu "<course>"
+		Then The corresponding course page should be displayed "<urlpage>"
 		
 		Examples: 
-		 |course|
-		 |Data Analytics & Visualization|
-		 |Cyber Security Professional|
-		 |Cloud Engineering|
-		 |Business Analyst|
-		 |Full Stack QA Engineering Course|
-	
+		 |course|urlpage|
+		 |Data Analytics & Visualization|https://transfotechacademy.com/course/data-analytics/|
+		 |Cyber Security Professional|https://transfotechacademy.com/course/cyber-security-professional/|
+		 |Cloud Engineering|https://transfotechacademy.com/course/cloud-engineering/|
+		 |Full Stack QA Engineering|https://transfotechacademy.com/qa-engineer/|
+		 |Business Analyst|https://transfotechacademy.com/course/business-analyst/|
+		 
+
 	
 	
 	

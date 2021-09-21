@@ -1,7 +1,6 @@
 package step_definition;
 
-//import org.junit.After;
-//import org.junit.Before;
+
 
 import base.Main;
 import io.cucumber.java.After;
@@ -12,12 +11,13 @@ public class Hooks extends Main {
 	
 		@Before
 		public void beforeScenario() {
-			
+			trn_HomePage_Initialization();
 		}
 		
 		@After
 		public void afterScenario() {
-			
+			tearDown();
+			System.out.println("Hooks After Class was visited..");
 		}
 	}
 

@@ -16,43 +16,45 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-
-Feature: Brief presentation of all Courses Offered by Transfotech Academy
-The user should be able to view the icons of various courses displayed in Home Page and view the 
-presentation of various courses through clicking the link Explore all Courses
+@Regression
+Feature: Brief presentation of all Courses Offered by Transfotech Academy The user should be able to view 
+the icons of various courses displayed in Home Page and view the presentation of various courses through 
+clicking the link Explore all Courses
 
 Scenario: Courses Icons Display & Enabled Test
-Given The user in home page
-Then The user should be able to view Icons of few selected courses, displayed under the section header - Courses We Offer
-And The user should be able to view Explore all Courses link as enabled
+	Given The user in home page
+	When The user presses page down five times
+	Then The user should be able to view Icons of few selected courses, displayed under the section header - Courses We Offer
+	And The user should be able to view Explore all Courses link as enabled
 
 Scenario Outline: Courses Icon Link Test
 Given The user in home page
-When The user clicks on any course icon <course>
-Then The corresponding course page should be displayed
+When The user presses page down five times
+And The user clicks on any course icon "<course>"
+Then The corresponding course page should be displayed "<urlpage>"
 Examples:
-|course|
-|Data Analytics & Visualization|
-|Cyber Security Professional|
-|Cloud Engineering|
-|Business Analyst|
-|Full Stack QA Engineering Course|
+|course|urlpage|
+|Data Analytics & Visualization|https://transfotechacademy.com/course/data-analytics/|
+#|Cyber Security Professional|https://transfotechacademy.com/course/cyber-security-professional/|
+#|Business Analyst|https://transfotechacademy.com/course/business-analyst/|
+#|Full Stack QA Engineering|https://transfotechacademy.com/course/qa-engineering/|
 
 Scenario: Explore All Courses Link Test
 Given The user in home page
-When The user clicks on Explore all Courses Link
-Then All the  individual Course's icons Data Analytics & Visualization,Cyber Security Professional,
-Cloud Engineering, Business Analyst, Full Stack QA Engineering Course should be displayed in home page
+When The user presses page down five times
+And The user clicks on Explore all Courses Link
+Then All the  individual Courses icons Data Analytics & Visualization,Cyber Security Professional, Cloud Engineering, Business Analyst, Full Stack QA Engineering Course should be displayed in home page
 
 Scenario Outline: Explore All Courses Link to Corresponding Page Test
 Given The user in home page
-When The user clicks on Explore all Courses Link
-When The user clicks on any course icon <course>
-Then The corresponding course page should be displayed
+When The user presses page down five times
+And The user clicks on Explore all Courses Link
+And The user clicks on any course icon "<course>"
+Then The corresponding course page should be displayed "<urlpage>"
 Examples:
-|course|
-|Data Analytics & Visualization|
-|Cyber Security Professional|
-|Cloud Engineering|
-|Business Analyst|
-|Full Stack QA Engineering Course|
+|course|urlpage|
+|Data Analytics & Visualization|https://transfotechacademy.com/course/data-analytics/|
+#|Cyber Security Professional|https://transfotechacademy.com/course/cyber-security-professional/|
+#|Cloud Engineering|https://transfotechacademy.com/course/cloud-engineering/|
+#|Business Analyst|https://transfotechacademy.com/course/business-analyst/|
+#|Full Stack QA Engineering|https://transfotechacademy.com/course/qa-engineering/|
