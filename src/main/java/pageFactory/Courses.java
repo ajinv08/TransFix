@@ -55,12 +55,12 @@ public class Courses extends Main{
 	public Courses() {
 			PageFactory.initElements(drives, this);
 			
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+//			try {
+//				Thread.sleep(1000);
+//			} catch (InterruptedException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
 		}
 			
 	//web element functions
@@ -74,7 +74,7 @@ public class Courses extends Main{
 	
 	public void course_link_click() {
 		
-		drives.navigate().refresh();
+//		drives.navigate().refresh();
 		act.moveToElement(courselink).build().perform();
 		try {
 			Thread.sleep(1000);
@@ -85,26 +85,12 @@ public class Courses extends Main{
 	}
 	
 	public void mouse_hover_course_link()  {
-		
-		act.moveToElement(courselink).build().perform();
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		course_link_click();
+
 	}
 	
 	public void course_selection(String course)  {
-		
-		drives.navigate().refresh();
-		act.moveToElement(courselink).build().perform();
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		course_link_click();
 		
 			if (course.equals("Data Analytics & Visualization")) {
 			act.moveToElement(data_analytic_course).click().build().perform();

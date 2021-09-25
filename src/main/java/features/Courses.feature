@@ -16,7 +16,7 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@Regression-done
+@Regression
 Feature: Courses
   As a user,  I should be able to view various course details offered, by accessing the courses link from the Home Page
 
@@ -44,7 +44,7 @@ Feature: Courses
 		 |Cloud Engineering|https://transfotechacademy.com/course/cloud-engineering/|
 		 |Full Stack QA Engineering|https://transfotechacademy.com/qa-engineer/|
 		 |Business Analyst|https://transfotechacademy.com/course/business-analyst/|
-		 
+		 |Full Stack QA Engineering|https://transfotechacademy.com/qa-engineer/|
 
 	
 	

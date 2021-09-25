@@ -3,7 +3,9 @@ package base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.Properties;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -34,21 +36,29 @@ public class Main {
 		}
 	    
 		
+//		System.setProperty(props.getProperty("chromeKey"), props.getProperty("chromePath"));
+//		drives = new ChromeDriver();
+//		drives.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//		drives.manage().window().maximize();
+//		drives.get(props.getProperty("UATurl"));
+		
+	}
+
+	public void propInitialization() {
 		System.setProperty(props.getProperty("chromeKey"), props.getProperty("chromePath"));
 		drives = new ChromeDriver();
 		drives.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		drives.manage().window().maximize();
-		drives.get(props.getProperty("UATurl"));
-		
 	}
-
 	
 	public void trn_HomePage_Initialization() {
-		//drives.get(props.getProperty("UATurl"));
+		drives.get(props.getProperty("UATurl"));
+		drives.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
 	
 	public void tearDown() {
-		drives.quit();
+		drives.close();
+		
 	}
 	
 }

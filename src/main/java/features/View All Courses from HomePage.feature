@@ -35,9 +35,9 @@ Then The corresponding course page should be displayed "<urlpage>"
 Examples:
 |course|urlpage|
 |Data Analytics & Visualization|https://transfotechacademy.com/course/data-analytics/|
-#|Cyber Security Professional|https://transfotechacademy.com/course/cyber-security-professional/|
-#|Business Analyst|https://transfotechacademy.com/course/business-analyst/|
-#|Full Stack QA Engineering|https://transfotechacademy.com/course/qa-engineering/|
+|Cyber Security Professional|https://transfotechacademy.com/course/cyber-security-professional/|
+|Business Analyst|https://transfotechacademy.com/course/business-analyst/|
+|Full Stack QA Engineering|https://transfotechacademy.com/course/qa-engineering/|
 
 Scenario: Explore All Courses Link Test
 Given The user in home page
@@ -49,12 +49,12 @@ Scenario Outline: Explore All Courses Link to Corresponding Page Test
 Given The user in home page
 When The user presses page down five times
 And The user clicks on Explore all Courses Link
-And The user clicks on any course icon "<course>"
+And The user clicks on any course icon "<course>" under Courses we offer
 Then The corresponding course page should be displayed "<urlpage>"
 Examples:
 |course|urlpage|
 |Data Analytics & Visualization|https://transfotechacademy.com/course/data-analytics/|
-#|Cyber Security Professional|https://transfotechacademy.com/course/cyber-security-professional/|
-#|Cloud Engineering|https://transfotechacademy.com/course/cloud-engineering/|
-#|Business Analyst|https://transfotechacademy.com/course/business-analyst/|
-#|Full Stack QA Engineering|https://transfotechacademy.com/course/qa-engineering/|
+|Cyber Security Professional|https://transfotechacademy.com/course/cyber-security-professional/|
+|Cloud Engineering|https://transfotechacademy.com/course/cloud-engineering/|
+|Business Analyst|https://transfotechacademy.com/course/business-analyst/|
+|Full Stack QA Engineering|https://transfotechacademy.com/course/qa-engineering/|

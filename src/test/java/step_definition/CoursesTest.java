@@ -13,17 +13,17 @@ public class CoursesTest extends Main {
 
 	Courses cp = new Courses();
 	String pageurl;
-	
+
 	@Given("The user in home page")
 	public void the_user_in_home_page() {
-		trn_HomePage_Initialization();
+		Assert.assertEquals(props.getProperty("UATurl"), cp.url_page_display());
 	}
 
 	@Then("The user should be able to view the  Courses link as enabled")
 	public void the_user_should_be_able_to_view_the_courses_link_as_enabled() {
 		  //cp.course_link_enabled_Test();
 		  Assert.assertTrue(cp.courselink.isEnabled());
-		 
+
 	}
 
 	@When("The user hover mouse  on Courses Link")
@@ -38,8 +38,8 @@ public class CoursesTest extends Main {
 		Assert.assertTrue(cp.cyber_security_course.isDisplayed());
 		Assert.assertTrue(cp.qa_engineer_course.isDisplayed());
 		Assert.assertTrue(cp.cloud_engineer_course.isDisplayed());
-		
-		
+
+
 	}
 
 	@When("The user clicks on Courses Link")
@@ -51,12 +51,12 @@ public class CoursesTest extends Main {
 	public void the_user_selects_any_of_the_courses_listed_from_the_drop_down_menu(String string){
 	    cp.course_selection(string);
 	}
-	
+
 	@Then("The corresponding course page should be displayed {string}")
 	public void the_corresponding_course_page_should_be_displayed(String pageurl) {
 	    //System.out.println(cp.url_page_display());
 		Assert.assertEquals(pageurl, cp.url_page_display());
-	   
+
 	}
 
 	}

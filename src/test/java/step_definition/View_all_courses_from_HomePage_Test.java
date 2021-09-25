@@ -33,6 +33,10 @@ public class View_all_courses_from_HomePage_Test extends Main {
 		vc.hpCourseSelection(string);
 	}
 
+	@When("The user clicks on any course icon {string} under Courses we offer")
+	public void the_user_clicks_on_any_course_icon_under_courses_we_offer(String string) {
+		vc.hpCourseSelection_inall_course(string) ;
+	}
 	
 	@And("The user clicks on Explore all Courses Link")
 	public void the_user_clicks_on_explore_all_courses_link() {
@@ -41,12 +45,11 @@ public class View_all_courses_from_HomePage_Test extends Main {
 
 	@Then("All the  individual Courses icons Data Analytics & Visualization,Cyber Security Professional, Cloud Engineering, Business Analyst, Full Stack QA Engineering Course should be displayed in home page")
 	public void all_the_individual_courses_icons_data_analytics_visualization_cyber_security_professional_cloud_engineering_business_analyst_full_stack_qa_engineering_course_should_be_displayed_in_home_page() {
-	   
-		Assert.assertTrue(vc.hpFullStackQaEngineering_display());
-		Assert.assertTrue(vc.hpDataAnalytics_Visualization_display());
-		Assert.assertTrue(vc.hpBusinessAnalyst_display());
-		Assert.assertTrue(vc.hpCyberSecurityProfessional_display());
-		Assert.assertTrue(vc.hpCloudEngineering_display());
+		Assert.assertTrue(vc.hpFullStackQaEngineering_inall_course_display());
+		Assert.assertTrue(vc.hpDataAnalytics_Visualization_inall_course_display());
+		Assert.assertTrue(vc.hpBusinessAnalyst_inall_course_display());
+		Assert.assertTrue(vc.hpCyberSecurityProfessional_inall_course_display());
+		Assert.assertTrue(vc.hpCloudEngineering_inall_course_display());
 	}
 	
 	@When("The user presses page down five times")
